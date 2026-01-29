@@ -2,139 +2,251 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Federal Real Estate & Contract Oversight Consulting</title>
+  <title>Unbridled Contracting | Federal Consulting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f4f6f8;
-      margin: 0;
-      padding: 40px 20px;
-      color: #1a1a1a;
+    :root{
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      --ink:#0f172a;
+      --muted:#475569;
+      --line:#e2e8f0;
+      --accent:#0b5ed7;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 50px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      padding:40px 18px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.55;
     }
 
-    header {
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 25px;
-      margin-bottom: 40px;
+    .wrap{
+      max-width:1000px;
+      margin:0 auto;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin: 0 0 10px 0;
-      letter-spacing: -0.02em;
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      margin-bottom:18px;
     }
 
-    .subtitle {
-      font-size: 1.1rem;
-      color: #4b5563;
-      max-width: 700px;
+    .brand{
+      font-weight:700;
+      letter-spacing:0.02em;
+      text-transform:uppercase;
+      font-size:0.85rem;
+      color:var(--muted);
     }
 
-    section {
-      margin-bottom: 40px;
+    .title{
+      font-size:2rem;
+      margin:8px 0 10px 0;
+      letter-spacing:-0.02em;
     }
 
-    h2 {
-      font-size: 1.25rem;
-      margin-bottom: 15px;
-      color: #111827;
-      border-left: 4px solid #0b5ed7;
-      padding-left: 10px;
+    .subtitle{
+      max-width:720px;
+      color:var(--muted);
+      font-size:1.05rem;
+      margin:0;
     }
 
-    ul {
-      padding-left: 20px;
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      box-shadow:0 8px 26px rgba(2,8,23,0.06);
+      padding:26px;
     }
 
-    li {
-      margin-bottom: 8px;
+    .grid{
+      display:grid;
+      grid-template-columns: 1.5fr 0.9fr;
+      gap:22px;
+      margin-top:18px;
     }
 
-    .contact-box {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      padding: 20px;
-      margin-top: 30px;
-      font-size: 0.95rem;
+    @media (max-width: 860px){
+      .grid{ grid-template-columns:1fr; }
+      .title{ font-size:1.7rem; }
     }
 
-    .contact-box strong {
-      display: block;
-      margin-bottom: 8px;
+    h2{
+      font-size:1.05rem;
+      margin:0 0 12px 0;
+      letter-spacing:0.01em;
+      text-transform:uppercase;
+      color:#111827;
     }
 
-    footer {
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: #6b7280;
+    .section{
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      margin-top:18px;
+    }
+
+    ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    li{ margin:0 0 8px 0; }
+
+    .pill{
+      display:inline-block;
+      border:1px solid var(--line);
+      background:#f8fafc;
+      padding:8px 10px;
+      border-radius:10px;
+      font-size:0.92rem;
+      color:var(--muted);
+      margin:6px 6px 0 0;
+    }
+
+    .contact{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .contact strong{
+      color:var(--ink);
+      font-size:1rem;
+    }
+
+    .btnrow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.95rem;
+      color:var(--ink);
+      background:#ffffff;
+    }
+
+    .btn.primary{
+      border-color:rgba(11,94,215,0.25);
+      background:rgba(11,94,215,0.08);
+      color:#0b3b86;
+    }
+
+    .note{
+      margin-top:14px;
+      padding:12px;
+      border-left:4px solid var(--accent);
+      background:#f8fafc;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:0.85rem;
     }
   </style>
 </head>
 
 <body>
+<div class="wrap">
 
-<div class="container">
-
-  <header>
-    <h1>Federal Real Estate & Contract Oversight Consulting</h1>
-    <p class="subtitle">
-      Independent due diligence, site verification, and third-party review
-      supporting federal agencies and prime contractors.
-    </p>
-  </header>
-
-  <section>
-    <h2>Services</h2>
-    <ul>
-      <li>Property site visits and condition observations</li>
-      <li>Verification of third-party studies and reports</li>
-      <li>Real estate due diligence and transaction support</li>
-      <li>Independent contract and site oversight</li>
-      <li>Short-notice assessments and field reporting</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Background</h2>
-    <ul>
-      <li>10+ years real estate and asset management experience</li>
-      <li>5+ years federal real estate and contracting oversight</li>
-      <li>Former Federal Contracting Officer’s Representative (Level III)</li>
-      <li>SDVOSB, registered and active in SAM.gov</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Engagement Model</h2>
-    <ul>
-      <li>Micro-purchase and short-notice tasking</li>
-      <li>Subcontract support to large prime contractors</li>
-      <li>Discrete due diligence, inspection, or verification assignments</li>
-      <li>Not a staffing firm. Not construction.</li>
-    </ul>
-  </section>
-
-  <div class="contact-box">
-    <strong>Contact</strong>
-    Alex Degler<br>
-    admin@unbridledcontracting.us
+  <div class="topbar">
+    <div>
+      <div class="brand">Unbridled Contracting</div>
+      <h1 class="title">Federal Real Estate and Contract Oversight Consulting</h1>
+      <p class="subtitle">
+        Independent due diligence, site verification, and third-party review support for federal agencies and prime contractors.
+      </p>
+    </div>
   </div>
 
-  <footer>
-    Unbridled Contracting, United States
-  </footer>
+  <div class="card grid">
+
+    <div>
+      <h2>What I Do</h2>
+      <ul>
+        <li>Property site visits and condition observations</li>
+        <li>Verification of third-party studies, reports, and deliverables</li>
+        <li>Real estate due diligence and transaction support</li>
+        <li>Independent site oversight and field reporting</li>
+        <li>Short-notice assessments in the region</li>
+      </ul>
+
+      <div class="section">
+        <h2>Why Me</h2>
+        <ul>
+          <li>Former Federal COR (Level III), familiar with government evaluation, performance, and documentation expectations</li>
+          <li>10+ years real estate and asset management experience</li>
+          <li>5+ years federal real estate and contracting oversight experience</li>
+          <li>SDVOSB, SAM registered</li>
+        </ul>
+
+        <div class="note">
+          Not a staffing firm. Not construction. This is professional services focused on due diligence, verification, and oversight.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Typical Tasking</h2>
+        <span class="pill">Micro-purchase and short-notice work</span>
+        <span class="pill">Subcontract support to primes</span>
+        <span class="pill">Discrete inspections and verifications</span>
+        <span class="pill">Documented field reports</span>
+      </div>
+    </div>
+
+    <div>
+      <h2>Contact</h2>
+      <div class="contact">
+        <strong>Alex Degler</strong>
+        <div>Email: <a href="mailto:admin@unbridledcontracting.us">admin@unbridledcontracting.us</a></div>
+        <div>Location: North Texas</div>
+      </div>
+
+      <div class="btnrow">
+        <a class="btn primary" href="mailto:admin@unbridledcontracting.us">Email me</a>
+        <a class="btn" href="#" title="Add your PDF later">Capability statement (PDF)</a>
+      </div>
+
+      <div class="section">
+        <h2>Quick Facts</h2>
+        <ul>
+          <li>SDVOSB</li>
+          <li>SAM registered</li>
+          <li>Federal COR Level III background</li>
+          <li>Field-ready, short-notice reporting</li>
+        </ul>
+      </div>
+
+      <div class="footer">
+        © <span id="y"></span> Unbridled Contracting. All rights reserved.
+      </div>
+      <script>
+        document.getElementById("y").textContent = new Date().getFullYear();
+      </script>
+    </div>
+
+  </div>
 
 </div>
-
 </body>
 </html>
